@@ -1,0 +1,21 @@
+/* Login.css */
+
+form label {
+    padding: 10px;
+    margin-left: 40px;
+}
+
+form button {
+    margin-left: 10px;
+}
+
+.App-body {
+    padding-top: 40px;
+}
+
+.App-body p {
+    font-size: 20px;
+    font: weight;
+    font-family: Arial, sans-serif;
+    margin-left: 50px;
+}
