@@ -1,8 +1,8 @@
 import React from 'react';
 import './Notifications.css';
 import close_icon from '../assets/close-icon.png';
-import NotificationItem from './NotificationItem';
-import NotificationItemShape from './NotificationItemShape';
+import NotificationItem from './NotificationItem.js';
+import NotificationItemShape from './NotificationItemShape.js';
 import PropTypes from 'prop-types';
 
 const Notifications = ({ displayDrawer, listNotifications }) => {

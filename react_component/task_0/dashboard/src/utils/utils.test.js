@@ -1,5 +1,5 @@
 import { strict as assert } from 'assert';
-import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
+import { getFullYear, getFooterCopy, getLatestNotification } from './utils.js';
 
 describe('Test Utils', () => {
 

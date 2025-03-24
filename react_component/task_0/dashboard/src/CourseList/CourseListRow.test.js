@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CourseListRow from './CourseListRow';
+import CourseListRow from './CourseListRow.js';
 
 describe('<CourseListRow />', () => {
   it('renders an <CourseListRow /> component', () => {
