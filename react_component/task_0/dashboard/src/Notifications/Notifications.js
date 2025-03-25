@@ -59,7 +59,7 @@ Notifications.prototype = {
 
 Notifications.defaultProps = {
   displayDrawer: false,
-  listNotifications: [],
+  listNotifications : [],
 }
 
 export default Notifications;

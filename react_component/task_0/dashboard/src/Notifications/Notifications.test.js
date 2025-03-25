@@ -29,12 +29,12 @@ describe('Notifications Component', () => {
         <Notifications displayDrawer={true} listNotifications={[]} />
       )
 
-        ;[wrapperWithoutList, wrapperWithEmptyList].forEach(wrapper => {
-          expect(wrapper.find(NotificationItem)).toHaveLength(1)
-          expect(wrapper.find(NotificationItem).prop('value')).toEqual(
-            'No new notification for now'
-          )
-        })
+      ;[wrapperWithoutList, wrapperWithEmptyList].forEach(wrapper => {
+        expect(wrapper.find(NotificationItem)).toHaveLength(1)
+        expect(wrapper.find(NotificationItem).prop('value')).toEqual(
+          'No new notification for now'
+        )
+      })
     })
 
     it('renders the correct number of notifications and their content when listNotifications contains elements', () => {
