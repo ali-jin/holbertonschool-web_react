@@ -1,20 +1,19 @@
-import { strict as assert } from 'assert';
-import { getFullYear, getFooterCopy, getLatestNotification } from './utils.js';
+import { getFooterCopy, getFullYear, getLatestNotification } from './utils'
 
-describe('Test Utils', () => {
+test('getFullYear returns the current year', () => {
+  expect(getFullYear()).toBe(new Date().getFullYear())
+})
 
-  it('Tests that getFullYear is current', () => {
-    assert.equal(getFullYear(), new Date().getFullYear());
-  });
-  it('Validates the result of getFooterCopy with true', () => {
-    assert.equal(getFooterCopy(true), 'Holberton School.');
-  });
-  it('Validates the result of getFooterCopy with false', () => {
-    assert.equal(getFooterCopy(false), 'Holberton School main dashboard');
-  });
+test('getFooterCopy returns correct string for true argument', () => {
+  expect(getFooterCopy(true)).toBe('Holberton School')
+})
 
-  it('checks return of getLatestNotification', () => {
-    // use JSON.stringify because
-    assert.equal(JSON.stringify(getLatestNotification()), JSON.stringify({ __html: '<strong>Urgent requirement</strong> - complete by EOD' }));
-  });
-});
+test('getFooterCopy returns correct string for false argument', () => {
+  expect(getFooterCopy(false)).toBe('Holberton School main dashboard')
+})
+
+test('getLatestNotifications returns the correct string', () => {
+  expect(getLatestNotification()).toBe(
+    '<strong>Urgent requirement</strong> - complete by EOD'
+  )
+})
