@@ -1,13 +1,12 @@
 {
   "name": "dashboard",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "webpack-dev-server --mode development --config config/webpack.config.js",
     "test": "jest",
-    "test-watch": "jest --watch",
-    "build": "webpack --config config/webpack.config.js"
+    "test-watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
@@ -47,8 +46,7 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+      "\\.(png|jpeg)$": "<rootDir>/__mocks__/fileMock.js"
     }
-  },
-  "description": ""
+  }
 }
