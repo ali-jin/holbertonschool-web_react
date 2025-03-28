@@ -42,5 +42,4 @@ describe('WithLogging HOC', () => {
       'Component Login is going to unmount'
     )
   })
-});
-
+})

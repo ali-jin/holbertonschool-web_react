@@ -20,7 +20,7 @@ class App extends React.Component {
 
   static defaultProps = {
     isLoggedIn: false,
-    logOut: () => { }
+    logOut: () => {}
   };
 
   componentDidMount() {
@@ -82,6 +82,7 @@ class App extends React.Component {
   }
 }
 
+// Define styles using Aphrodite
 const styles = StyleSheet.create({
   app: {
   },

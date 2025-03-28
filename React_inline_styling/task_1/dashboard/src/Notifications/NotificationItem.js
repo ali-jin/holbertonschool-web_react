@@ -17,7 +17,7 @@ class NotificationItem extends React.PureComponent {
     type: 'default',
     value: '',
     html: null,
-    markAsRead: () => { },
+    markAsRead: () => {},
     id: null
   };
 
@@ -43,7 +43,7 @@ class NotificationItem extends React.PureComponent {
       )
     } else {
       return (
-        <li className={css(style)} data-notification-type={type} onClick={this.handleClick}>
+        <li  className={css(style)} data-notification-type={type} onClick={this.handleClick}>
           {value}
         </li>
       )
