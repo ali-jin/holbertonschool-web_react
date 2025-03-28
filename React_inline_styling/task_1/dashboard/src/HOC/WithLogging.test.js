@@ -43,3 +43,4 @@ describe('WithLogging HOC', () => {
     )
   })
 });
+

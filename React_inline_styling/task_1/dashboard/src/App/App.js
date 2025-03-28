@@ -82,7 +82,6 @@ class App extends React.Component {
   }
 }
 
-// Define here the inline styling with Aphrodite
 const styles = StyleSheet.create({
   app: {
   },
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: '20px',
     fontStyle: 'italic',
     fontFamily: 'Arial, sans-serif',
-  }
+  },
 });
 
 export default App;

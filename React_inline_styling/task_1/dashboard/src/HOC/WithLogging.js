@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 function WithLogging(WrappedComponent) {
   return class extends Component {
     // Assign the correct display name for debugging
-    static displayName = `WithLogging(${
-      WrappedComponent.displayName || WrappedComponent.name || 'Component'
-    })`
+    static displayName = `WithLogging(${WrappedComponent.displayName || WrappedComponent.name || 'Component'
+      })`
 
     // Log message on component mount
     componentDidMount() {

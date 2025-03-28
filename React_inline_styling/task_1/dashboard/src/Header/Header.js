@@ -14,7 +14,7 @@ function Header() {
 const styles = StyleSheet.create({
   header: {
     padding: '6px',
-    borderBottom: '4px solid #cf4550',
+    borderBottom:'4px solid #cf4550',
     display: 'flex',
     alignItems: 'center',
   },
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
     fontSize: '40px',
     color: '#cf4550',
   }
-});
+})
 
 export default Header;

@@ -24,7 +24,6 @@ class Notifications extends React.Component {
   }
 
   shouldComponentUpdate(nextProps) {
-    // Only update if the new listNotifications has more items than the current list
     return (
       nextProps.listNotifications.length > this.props.listNotifications.length
     )
@@ -94,6 +93,6 @@ const styles = StyleSheet.create({
     padding: '5px',
     marginRight: '10px',
   },
-});
+})
 
 export default Notifications;

@@ -25,4 +25,4 @@ describe('<Header />', () => {
     expect(h1).toHaveLength(1)
     expect(h1.text()).toEqual('School dashboard')
   })
-});
+})

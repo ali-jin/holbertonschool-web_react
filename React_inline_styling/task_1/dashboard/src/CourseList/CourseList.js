@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyleSheet, css } from 'aphrodite';
 import PropTypes from 'prop-types'
+import { StyleSheet, css } from 'aphrodite';
 import CourseShape from './CourseShape'
 import CourseListRow from './CourseListRow'
 
@@ -36,7 +36,6 @@ const CourseList = ({ listCourses }) => {
   )
 }
 
-// Define propTypes
 CourseList.propTypes = {
   listCourses: PropTypes.arrayOf(CourseShape),
 };

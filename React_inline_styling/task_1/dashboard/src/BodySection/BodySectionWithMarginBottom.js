@@ -25,7 +25,7 @@ class BodySectionWithMarginBottom extends React.Component {
 const styles = StyleSheet.create({
   bodySectionWithMargin: {
     marginBottom: '40px',
-  }
+  },
 });
 
 export default BodySectionWithMarginBottom
