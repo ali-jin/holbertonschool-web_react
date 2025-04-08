@@ -22,8 +22,8 @@ class Notifications extends React.Component {
   static defaultProps = {
     displayDrawer: false,
     listNotifications: [],
-    handleDisplayDrawer: () => { },
-    handleHideDrawer: () => { },
+    handleDisplayDrawer: () => {},
+    handleHideDrawer: () => {},
   }
 
   markAsRead = id => {
