@@ -50,5 +50,5 @@ const styles = StyleSheet.create({
     border: '1px solid #ccc',
     padding: '5px'
   }
-});
+})
 export default Login;

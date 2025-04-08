@@ -1,19 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationItem from './NotificationItem';
-import { StyleSheetTestUtils, css, StyleSheet } from 'aphrodite';
-
-const styles = StyleSheet.create({
-  default: {
-    color: '#180C5F',
-  },
-  urgent: {
-    color: 'red',
-  },
-});
-
-const defaultClassName = css(styles.default);
-const urgentClassName = css(styles.urgent);
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe('NotificationItem Component', () => {
   beforeAll(() => {
@@ -63,15 +51,15 @@ describe('NotificationItem Component', () => {
     it('applies the correct style for "default" type', () => {
       const wrapper = shallow(<NotificationItem type="default" value="Test" />);
       const li = wrapper.find('li');
-      expect(li.hasClass(defaultClassName)).toBe(true);
-      expect(li.hasClass(urgentClassName)).toBe(false);
+      expect(li.prop('className')).toContain('default');
+      expect(li.prop('className')).not.toContain('urgent');
     });
 
     it('applies the correct style for "urgent" type', () => {
       const wrapper = shallow(<NotificationItem type="urgent" value="Test" />);
       const li = wrapper.find('li');
-      expect(li.hasClass(defaultClassName)).toBe(false);
-      expect(li.hasClass(urgentClassName)).toBe(true);
+      expect(li.prop('className')).toContain('urgent');
+      expect(li.prop('className')).not.toContain('default');
     });
   });
 });

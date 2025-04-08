@@ -11,7 +11,6 @@ import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBot
 import { getLatestNotification } from '../utils/utils';
 import WithLogging from '../HOC/WithLogging'
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -107,7 +106,6 @@ class App extends React.Component {
   }
 }
 
-// Define styles using Aphrodite
 const styles = StyleSheet.create({
   app: {
   },

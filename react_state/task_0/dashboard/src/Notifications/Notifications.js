@@ -22,15 +22,15 @@ class Notifications extends React.Component {
   static defaultProps = {
     displayDrawer: false,
     listNotifications: [],
-    handleDisplayDrawer: () => {},
-    handleHideDrawer: () => {},
+    handleDisplayDrawer: () => { },
+    handleHideDrawer: () => { },
   }
 
-  markAsRead = id => {
+  markAsRead(id) {
     console.log(`Notification ${id} has been marked as read`)
   }
 
-  handleClose = () => {
+  handleClose() {
     console.log('Close button has been clicked')
     this.props.handleHideDrawer();
   }
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     marginRight: '10px',
     cursor: 'pointer',
     animationName: [bounceFrames, opacityFrames],
-    animationDuration: '0.3s, 0.3s',
+    animationDuration: '0.2s, 0.2s',
     animationIterationCount: '3, 3',
     animationTimingFunction: 'ease-in-out, ease-in-out',
     animationFillMode: 'forwards, forwards'
@@ -152,6 +152,6 @@ const styles = StyleSheet.create({
       right: '.5rem'
     }
   }
-});
+})
 
 export default Notifications;

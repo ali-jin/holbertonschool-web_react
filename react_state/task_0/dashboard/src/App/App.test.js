@@ -9,7 +9,6 @@ import { StyleSheetTestUtils, css } from 'aphrodite';
 import { StyleSheet } from 'aphrodite';
 
 describe('<App />', () => {
-  // Désactiver l'injection de styles Aphrodite pour éviter des erreurs pendant les tests
   StyleSheetTestUtils.suppressStyleInjection();
 
   afterAll(() => {
@@ -48,7 +47,7 @@ describe('<App />', () => {
 
   it('calls logOut function and displays alert when Ctrl+H is pressed', () => {
     const mockLogOut = jest.fn();
-    const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => {});
+    const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => { });
 
     const wrapper = shallow(<App logOut={mockLogOut} />);
     const instance = wrapper.instance();
@@ -88,6 +87,24 @@ describe('<App />', () => {
     expect(appDiv.hasClass(css(StyleSheet.create({
       app: {}
     }).app))).toBe(true);
+  });
+
+  it('should have displayDrawer default to false', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.state('displayDrawer')).toBe(false);
+  });
+
+  it('should set displayDrawer to true when handleDisplayDrawer is called', () => {
+    const wrapper = shallow(<App />);
+    wrapper.instance().handleDisplayDrawer();
+    expect(wrapper.state('displayDrawer')).toBe(true);
+  });
+
+  it('should set displayDrawer to false when handleHideDrawer is called', () => {
+    const wrapper = shallow(<App />);
+    wrapper.setState({ displayDrawer: true });
+    wrapper.instance().handleHideDrawer();
+    expect(wrapper.state('displayDrawer')).toBe(false);
   });
 
 });

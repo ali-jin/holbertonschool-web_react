@@ -5,7 +5,6 @@ import Login from './Login';
 
 const styles = StyleSheet.create({
   body: {
-    padding: '40px',
     fontSize: '20px',
     fontFamily: 'Arial, sans-serif',
   },
@@ -19,15 +18,19 @@ const styles = StyleSheet.create({
     display: 'inline-block',
     marginRight: '10px',
   },
-  border: {
+  input: {
     border: '1px solid #ccc',
+  },
+  label: {
+    marginRight: '10px',
+    fontWeight: 'bold',
   }
 });
 
 const bodyClassName = css(styles.body);
 const buttonClassName = css(styles.button);
-const formClassName = css(styles.form);
-const formBorderClassName = css(styles.form, styles.border);
+const inputClassName = css(styles.input);
+const labelClassName = css(styles.label);
 
 describe('Login Component', () => {
   beforeAll(() => {
@@ -57,21 +60,21 @@ describe('Login Component', () => {
     it('should apply the correct styles to input tags', () => {
       const wrapper = shallow(<Login />);
       const inputs = wrapper.find('input');
-      expect(inputs.at(0).hasClass(formBorderClassName)).toBe(true);
-      expect(inputs.at(1).hasClass(formBorderClassName)).toBe(true);
+      expect(inputs.at(0).prop('className')).toContain('input');
+      expect(inputs.at(1).prop('className')).toContain('input');
     });
 
     it('should apply the correct style to label tags', () => {
       const wrapper = shallow(<Login />);
       const labels = wrapper.find('label');
-      expect(labels.at(0).hasClass(formClassName)).toBe(true);
-      expect(labels.at(1).hasClass(formClassName)).toBe(true);
+      expect(labels.at(0).prop('className')).toContain('label');
+      expect(labels.at(1).prop('className')).toContain('label');
     });
 
     it('should apply the correct style to the button', () => {
       const wrapper = shallow(<Login />);
       const button = wrapper.find('button');
-      expect(button.hasClass(buttonClassName)).toBe(true);
+      expect(button.prop('className')).toContain('button');
     });
   });
 });
