@@ -118,10 +118,12 @@ describe('<App />', () => {
   describe('mapStateToProps', () => {
     it('returns the right object when passing a state', () => {
       const state = fromJS({
-        isUserLoggedIn: true
+        isUserLoggedIn: true,
+        isNotificationDrawerVisible: true
       });
       const expected = {
-        isLoggedIn: true
+        isLoggedIn: true,
+        displayDrawer: true
       };
       expect(mapStateToProps(state)).toEqual(expected);
     });
